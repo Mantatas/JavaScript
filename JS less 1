@@ -67,3 +67,138 @@ let item = {
 for(let property in item){
     console.log(`property: ${item[property]}`)
 }
+
+
+let userList = [
+     "Gabriele",
+     "Laura",
+     "Greta",
+     "Egle",
+     "Ieva",
+     "Milda",
+     "Jurgita",
+     "Rasa",
+     "Giedre",
+     "Ingrida"
+ ];
+
+Isveskite console vardus, kuriu ilgis yra 5 simboliai arba vardas yra Milda
+
+ for (let i of userList){
+     let index = userList.indexOf(i)
+     if (i.length < 6 && i.length > 4 || i == 'Gabriele'){
+         console.log(`${i}, pozicija: ${index + 1}`)
+     }
+ }
+
+let students = [
+    {
+        id: 1,
+        firstName: "Jonas",
+        lastName: "Jonaitis",
+        age: 22,
+        email: "jonas@gmail.com",
+        group: "studentsh"
+    },
+    {
+        id: 2,
+        firstName: "Petras",
+        lastName: "Jonaitis",
+        age: 25,
+        email: "petras@gmail.com",
+        group: "studentsh"
+    },
+    {
+        id: 3,
+        firstName: "Vardenis",
+        lastName: "Jonaitis",
+        age: 27,
+        email: "vardenis@gmail.com",
+        group: "studentsh"
+    },
+    {
+        id: 4,
+        firstName: "Virdenis",
+        lastName: "Jonaitis",
+        age: 28,
+        email: "virdenis@gmail.com",
+        group: "studentsh"
+    },
+    {
+        id: 5,
+        firstName: "Karka",
+        lastName: "Jonaitis",
+        age: 20,
+        email: "karka@gmail.com",
+        group: "studentsh"
+    }
+]
+
+isveskite studentus, kuriu amzius nevirsija 25 metus
+
+isvedimas
+
+Studentu sarasas:
+----------------
+         id: 5,
+         firstName: "Karka",
+         lastName: "Jonaitis",
+         age: 31,
+         email: "karka@gmail.com",
+         group: "studentsh"
+---------------
+kitas studentas
+
+ console.log("Studentu sarasas:")
+ console.log("----------------")
+ for (let i in students){
+     for (let j in students[i]){
+         if (j == 'id' || j =='age'){
+             console.log(`${j}: ${students[i][j]}`)
+         }
+         else{
+             console.log(`${j}: "${students[i][j]}"`)
+         }
+     }
+     console.log("----------------")
+ }
+
+ console.log("Studentu sarasas:")
+ console.log("----------------")
+ for (let student of students){
+     if(student.age <=25){
+         for (let value in student){
+             if (value == 'id' || value =='age'){
+                 console.log(`${value}: ${student[value]}`)
+             }
+             else{
+                 console.log(`${value}: "${student[value]}"`)
+             }
+         }
+     }
+     console.log("----------------")}
+ let firstName = prompt('Ivesk varda')
+ alert(firstName)
+
+/*
+sukurti sveciu saraso formavimo aplikacija
+paleidus aplikacija paklausiamas sveciu skaicius.
+po sveciu skaiciaus ivedimo prompt rodomas tiek kartu,
+kiek bus sveciu.
+surinkus sveciu vardus, konsoleje atspausdinamas vardu
+sarasas.
+*/
+
+
+
+let guestCount = prompt('Kiek sveciu?')
+let guests = []
+alert(guestCount)
+for (firstName = 0; firstName < guestCount; firstName++){
+    if (guestCount > firstName){
+        let firstName = prompt('Koks vardas?')
+        alert(firstName)
+        guests.push(`${firstName}`)
+    }
+}
+console.log(`${guests}`)
