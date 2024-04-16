@@ -1,0 +1,13 @@
+let items = ['Phone', 'computer', 'milk'];
+
+console.log(items.length); //count
+
+items = items.join(','); //convert array to string
+
+items = items.split(','); //convert string to array
+
+items.push('Smart watch'); //add to array
+
+items.pop(); //remove from array
+
+console.log(items);
