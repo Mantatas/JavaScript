@@ -12,3 +12,58 @@ items.shift(); //remove first element in array
 items.unshift('Kazkas'); //add a first element to array
 
 console.log(items);
+
+
+let activeUser = 'Jonas';
+
+if(activeUser === "Jonas" && activeUser.length<=4){
+    console.log('Standard user');
+}
+else if(activeUser.length<=8){
+    console.log('VIP user')
+}
+else{
+    console.log('Is no active');
+}
+
+
+let language = "lt";
+
+switch(language){
+    case "lt":
+        console.log("Labas")
+        break;
+    case "en":
+        console.log("Hillo")
+        break;
+    default:
+        console.log('nepazystu kalbos')
+}
+
+
+let result = 12 > 6 ? "true": "false";
+console.log(result);
+console.log("Masyvo elementai:")
+// for(let i=0;i<items.length;i++){
+//     console.log(items[i])
+// }
+
+// for(let item of items){ //works only with array
+//     console.log(item)
+// }
+
+// for(let item in items){ 
+//     console.log(items[item])
+// }
+
+
+let item = {
+    code: 1234,
+    title: 'Computor',
+    count: 12,
+    price: 1250.45
+};
+
+for(let property in item){
+    console.log(`property: ${item[property]}`)
+}
