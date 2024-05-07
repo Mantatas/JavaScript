@@ -1,0 +1,15 @@
+const categoryForm = (document.querySelector('#categoryForm'))
+
+categoryForm.addEventListener('submit', (e)=> {
+    e.preventDefault();
+
+    const category = document.querySelector('#textInput').value;
+    const list = document.querySelector('#bookList');
+    const ol = document.querySelector('#bookList')
+    for(i=0; i<Object.keys(sortedBooks).length; i++)
+        sortedBooks.forEach(book => {
+            const newBook = document.createElement('li');
+            newBook.textContent = Object.values(bookCategory("Horror"));
+            ol.appendChild(newBook);
+    })
+})
