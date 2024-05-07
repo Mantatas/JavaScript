@@ -1,22 +1,14 @@
-const categoryForm = (document.querySelector('#categoryForm'))
-
-categoryForm.addEventListener('submit', (e)=> {
+categoryForm.addEventListener('submit', (e) =>{
     e.preventDefault();
-
     const category = document.querySelector('#textInput').value;
-    const list = document.querySelector('#bookList');
-    const categoryBooks = bookCategory(category);
-    categoryBooks.forEach(book => {
-        const newBook = document.createElement('li');
-        newBook.textContent = book.books;
-        newBook.forEach(book =>{
-            'isbn:' `${book.isbn}`
-            'year:' `${book.release_date}`
-            'title:' `${book.title}`
-            'pages:' `${book.num_of_pages}`
-            'price:' `${book.price}`
-        })
-        list.appendChild(newBook);
-    })
+    bookCategory(category)
+})
+
+function bookCategory(category){
+    let filterByCategory = bookList.filter((book)=> (book.name === category))
+    for (let book of filterByCategory[0].books){
+        let li = document.createElement('li');
+        li.textContent = book.title, book.isbn, book.release_date, book.num_of_pages, book.price;
+        document.querySelector('#bookList').appendChild(li)
     }
-)
+} 
