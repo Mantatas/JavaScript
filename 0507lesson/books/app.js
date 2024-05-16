@@ -118,3 +118,5 @@ function bookCategory(category){
     }
 } 
 
+priceArray = bookList[books.price.value]
+console.log(priceArray)
